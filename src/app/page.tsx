@@ -1,11 +1,15 @@
+import { PersonButton } from "@/components";
+import { persons } from "@/lib/data";
 import React from "react";
+
+
 
 const HomePage = () => {
   return (
     <div className="flex justify-start items-center h-svh flex-col w-full bg-background text-foreground">
       <div className="text-center py-[67px]">
         <h1 className="text-[81.85px] font-extrabold leading-[99.06px] tracking-[-3%]">
-          Get in{" "}
+          Get in
           <span className="bg-gradient-to-r from-foreground from-10% via-secondary via-85% to-primary to-100% bg-clip-text text-transparent">
             touch
           </span>
@@ -21,7 +25,23 @@ const HomePage = () => {
         <div className="left-0 bottom-0 absolute size-[152px] rounded-full blur-[200px] bg-secondary" />
 
         <div className="w-full h-full p-5 flex justify-between items-start relative z-20">
-          <div>{/* Form */}</div>
+          {/* <ContactUs /> */}
+          <div className="w-full max-w-[506px] space-y-5 p-10">
+            
+            <div className="space-y-2.5">
+              <h2 className="font-semibold text-3xl leading-[36.31px] tracking-[-2%]">
+                Let&apos;s contact our team!
+              </h2>
+              <div className="space-x-2.5">
+                {
+                  persons.map((person) => (
+                    <PersonButton key={person.id}>{person.name}</PersonButton>
+                  ))
+                }
+              </div>
+            </div>
+
+          </div>
 
           <div className="w-full max-w-[516px] relative">
             <img
@@ -31,7 +51,7 @@ const HomePage = () => {
               height={536}
               className="w-full h-auto rounded-xl"
             />
-            
+
             <div className="space-y-1.5 px-7 absolute bottom-10 w-full">
               <p className="opacity-70">
                 For any problems or assistance, please contact the Hablu
