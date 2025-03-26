@@ -1,6 +1,5 @@
-import { PersonButton } from "@/components";
+import { ContactForm, PersonButton} from "@/components";
 import { persons } from "@/lib/data";
-import React from "react";
 
 
 
@@ -9,10 +8,7 @@ const HomePage = () => {
     <div className="flex justify-start items-center h-svh flex-col w-full bg-background text-foreground">
       <div className="text-center py-[67px]">
         <h1 className="text-[81.85px] font-extrabold leading-[99.06px] tracking-[-3%]">
-          Get in
-          <span className="bg-gradient-to-r from-foreground from-10% via-secondary via-85% to-primary to-100% bg-clip-text text-transparent">
-            touch
-          </span>
+          Get in <span className="bg-gradient-to-r from-foreground from-10% via-secondary via-85% to-primary to-100% bg-clip-text text-transparent"> touch</span>
         </h1>
         <p className="text-[22px] font-medium leading-[26.63px] tracking-[-2%]">
           Contact the Hablu Programmer team!
@@ -26,8 +22,8 @@ const HomePage = () => {
 
         <div className="w-full h-full p-5 flex justify-between items-start relative z-20">
           {/* <ContactUs /> */}
-          <div className="w-full max-w-[506px] space-y-5 p-10">
-            
+          <div className="w-full max-w-[506px] space-y-10 p-10">
+
             <div className="space-y-2.5">
               <h2 className="font-semibold text-3xl leading-[36.31px] tracking-[-2%]">
                 Let&apos;s contact our team!
@@ -40,7 +36,7 @@ const HomePage = () => {
                 }
               </div>
             </div>
-
+                <ContactForm />
           </div>
 
           <div className="w-full max-w-[516px] relative">
